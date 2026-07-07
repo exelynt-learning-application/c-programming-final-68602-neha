@@ -1,11 +1,36 @@
-# Hello World Program
-# Hello World Program
+#include <iostream>
+#include <string>
+using namespace std;
 
-# Display program title
-print("===== Hello World Program =====")
+int main()
+{
+    // Display program title
+    cout << "===== Hello World Program =====" << endl;
 
-# Take user input
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
-city = input("Enter your city: ")
+    // Declare variables
+    string name, city;
+    int age;
 
+    // Take user input
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    cout << "Enter your age: ";
+    cin >> age;
+    cin.ignore();
+
+    cout << "Enter your city: ";
+    getline(cin, city);
+
+    // Display user information
+    cout << "\n===== User Information =====" << endl;
+    cout << "Name : " << name << endl;
+    cout << "Age  : " << age << endl;
+    cout << "City : " << city << endl;
+
+    // Formatted output
+    cout << "\nHello, " << name << "!" << endl;
+    cout << "You are " << age << " years old and you live in " << city << "." << endl;
+
+    return 0;
+}
